@@ -1,0 +1,6 @@
+:9000 {
+  log
+
+  root * /srv/www
+  file_server
+}

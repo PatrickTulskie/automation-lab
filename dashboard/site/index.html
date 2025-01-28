@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Automation Lab</title>
+    <style>
+      body {
+        background-color: #2b2d2d;
+      }
+
+      .page-title {
+        color: #fff;
+      }
+
+      .list-group-item:first-child {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .list-group-item:last-child {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .list-group-item {
+        background-color: #4a4c4d;
+        color: #ffffff;
+        transition: all 0.3s;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .list-group-item:hover {
+        background-color: #b23cfd;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center page-title display-3">🤖 Automation Lab 🧪</h1>
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <div class="list-group my-5">
+            <a href="http://localhost:5678" target="_blank" class="list-group-item list-group-item-action text-center">⚙️ n8n</a>
+            <a href="http://localhost:8888" target="_blank" class="list-group-item list-group-item-action text-center">📓 Jupyter</a>
+            <a href="http://localhost:3000" target="_blank" class="list-group-item list-group-item-action text-center">🌐 Open-WebUI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

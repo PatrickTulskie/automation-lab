@@ -1,0 +1,59 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_SECURE_COOKIE=false
+    volumes:
+      - n8n_data:/home/node/.n8n
+    restart: unless-stopped
+
+  html2text:
+    build:
+      context: ./html2text
+    container_name: html2text
+    restart: unless-stopped
+    ports:
+      - "5099:5000"
+
+  jupyter:
+    build: ./jupyter-langchain
+    container_name: jupyter-langchain
+    ports:
+      - "8888:8888"
+    volumes:
+      - ~/Code/jupyter-notebooks:/home/jovyan/work  # Mount your desired folder
+    environment:
+      - PYTHONUNBUFFERED=1
+      - JUPYTER_ENABLE_LAB=yes
+    restart: unless-stopped
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    ports:
+      - "3000:8080"
+    volumes:
+      - open-webui:/app/backend/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  dashboard:
+    image: caddy
+    container_name: caddy
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./dashboard/caddy:/config
+      - ./dashboard/site:/srv/www
+    environment:
+      - ACME_AGREE=true
+      - EMAIL=patrick@jivemastert.com
+    command: ["caddy", "run", "--config", "/config/Caddyfile"]
+
+volumes:
+  n8n_data:
+  open-webui:
