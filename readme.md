@@ -26,7 +26,7 @@ A Docker-based environment to host various automation and productivity tools, in
 1. **Clone Repository**: Clone the repository to your local machine.
 
     ```bash
-    git clone https://github.com/your-username/automation-lab.git
+    git clone https://github.com/patricktulskie/automation-lab.git
     cd automation-lab
     ```
 2. **Start Services**: Start the Docker services.
