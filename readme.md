@@ -14,6 +14,9 @@ A Docker-based environment to host various automation and productivity tools, in
    Install Docker Compose:
    https://docs.docker.com/compose/install/
 
+   Install Ollama:
+   https://ollama.com
+
 2.	Notebook Path: Update the Jupyter service in docker-compose.yml to mount your desired notebook folder:
 
     ```yaml
