@@ -1,4 +1,4 @@
-# Automation Lab
+![Automation Lab](documentation/img/logo.png)
 
 A Docker-based environment to host various automation and productivity tools, including [n8n](https://n8n.io), [Jupyter Notebook](https://jupyter.org), and [Open-WebUI](https://github.com/open-webui/open-webui).
 
