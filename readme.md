@@ -17,11 +17,11 @@ A Docker-based environment to host various automation and productivity tools, in
    Install Ollama:
    https://ollama.com
 
-2.	Notebook Path: Update the Jupyter service in docker-compose.yml to mount your desired notebook folder:
+2. Local File Paths: You don't have to use these paths, but you will need to update the `docker-compose.yml` file if you choose to use different paths.
 
-    ```yaml
-    volumes:
-        - /absolute/path/to/your/notebooks:/home/jovyan/work
+    ```bash
+    mkdir ~/.n8n # This is where n8n will store its data and configuration so it is persisted if the container is removed
+    mkdir -p ~/Code/jupyter-notebooks # This is where Jupyter Notebook will store its notebooks
     ```
 
 ## Getting Started
