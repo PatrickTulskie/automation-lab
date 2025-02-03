@@ -53,6 +53,7 @@ services:
       - ACME_AGREE=true
       - EMAIL=patrick@jivemastert.com
     command: ["caddy", "run", "--config", "/config/Caddyfile"]
+    restart: unless-stopped
 
 volumes:
   open-webui:
